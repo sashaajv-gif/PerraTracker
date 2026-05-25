@@ -22,7 +22,7 @@ jobs:
 
       - name: Run script
         env:
-          STEAM_API_KEY: ${{ secrets.B4180024D26162FB22F88A674145EB91 }}
-          STEAM_ID: ${{ secrets.76561198088072398 }}
-          DISCORD_WEBHOOK: ${{ secrets.https://discord.com/api/webhooks/1508526265332924558/viZqhN-YgpXpzpzxlJfTUG_iAEcwKHuthQmDBPwRZfj633j5l52W2DtcsNaa2SodTw4k }}
+          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
+          STEAM_ID: ${{ secrets.STEAM_ID }}
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         run: python main.py
