@@ -1,11 +1,9 @@
 import requests
 from datetime import datetime, timezone
 
-STEAM_API_KEY = "B4180024D26162FB22F88A674145EB91"
-STEAM_ID = "76561198088072398"
-
-DISCORD_WEBHOOK = "https://discord.com/api/webhooks/1508526265332924558/viZqhN-YgpXpzpzxlJfTUG_iAEcwKHuthQmDBPwRZfj633j5l52W2DtcsNaa2SodTw4k"
-
+STEAM_API_KEY = os.environ["STEAM_API_KEY"]
+STEAM_ID = os.environ["STEAM_ID"]
+DISCORD_WEBHOOK = os.environ["DISCORD_WEBHOOK"]
 
 def get_steam_status():
     url = (
