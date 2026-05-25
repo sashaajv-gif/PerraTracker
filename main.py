@@ -36,7 +36,8 @@ def get_steam_status():
 
         now = datetime.now(timezone.utc)
 
-        days_offline = (now - last_online).days
+        delta = now - last_online
+        days_offline = round(delta.total_seconds() / 86400)
 
         return f"Perttu on ollut Steamissa offlinessa {days_offline} päivää."
 
