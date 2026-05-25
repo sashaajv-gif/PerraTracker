@@ -1,4 +1,6 @@
+import os
 import requests
+from datetime import datetime, timezone
 from datetime import datetime, timezone
 
 STEAM_API_KEY = os.environ["STEAM_API_KEY"]
