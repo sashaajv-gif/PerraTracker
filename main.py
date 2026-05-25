@@ -38,9 +38,9 @@ def get_steam_status():
 
         days_offline = (now - last_online).days
 
-        return f"Perttu ollut offline {days_offline} päivää."
+        return f"Perttu on ollut offline {days_offline} päivää."
 
-    return "Steam-profiili on online!!!."
+    return "Perttu on online!!!."
 
 
 message = get_steam_status()
