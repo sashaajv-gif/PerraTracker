@@ -1,0 +1,28 @@
+name: Steam daily check
+
+on:
+  schedule:
+    - cron: "0 15 * * *"   # joka päivä klo 15 UTC
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run script
+        env:
+          STEAM_API_KEY: ${{ secrets.B4180024D26162FB22F88A674145EB91 }}
+          STEAM_ID: ${{ secrets.76561198088072398 }}
+          DISCORD_WEBHOOK: ${{ secrets.https://discord.com/api/webhooks/1508526265332924558/viZqhN-YgpXpzpzxlJfTUG_iAEcwKHuthQmDBPwRZfj633j5l52W2DtcsNaa2SodTw4k }}
+        run: python main.py
