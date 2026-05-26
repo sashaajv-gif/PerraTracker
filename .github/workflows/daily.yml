@@ -2,7 +2,7 @@ name: Steam daily check
 
 on:
   schedule:
-    - cron: "0 15 * * *"   # joka päivä klo 15 UTC
+    - cron: "0 16 * * *"
   workflow_dispatch:
 
 jobs:
