@@ -1,12 +1,13 @@
-name: schedule debug
+name: "schedule cron"
 
 on:
   schedule:
     - cron: "*/5 * * * *"
-  workflow_dispatch:
+
 
 jobs:
-  test:
+  scheduling:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "SCHEDULE TRIGGERED"
+      - name: info
+        run: echo "SCHEDULE TRIGGERED"
