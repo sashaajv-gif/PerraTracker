@@ -1,4 +1,4 @@
-name: schedule test
+name: schedule debug
 
 on:
   schedule:
@@ -9,4 +9,4 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "schedule works"
+      - run: echo "SCHEDULE TRIGGERED"
