@@ -1,6 +1,6 @@
 name: "schedule cron"
 
-on:
+/on:
   schedule:
     - cron: "*/5 * * * *"
 
